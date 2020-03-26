@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Novo Pedido</title>
+{% endblock %}
+
+{% block body %}
+<h1>Novo Pedido</h1>
+
+    <hr>
+    <h2>Criar novo Pedido:</h2>
+    <form action='/posts' method='POST'>
+
+        <label for="title">Loja:</label>
+        <input class="form-control" name='title' id='title' type="text" placeholder="Mercado Sonda, Carrefour, Farmácia?" aria-label="Enter Title">
+        <br>
+
+        <label for="author">Nome:</label>
+        <input class="form-control" name='author' id='author' type="text" placeholder="Qual o seu nome?" aria-label="Enter Author">
+        <br>
+
+        <label for="content">Pedido:</label>    
+    <textarea class="form-control" name='content' id="content" placeholder='Qual o pedido? Inclua o endereço também =)' aria-label="Qual o pedido? Inclua o endereço também =)" rows="3"></textarea>
+        <br>
+
+        <input type='submit' value='Publicar'>
+    </form>
+    <hr>
+
+{% endblock %}
